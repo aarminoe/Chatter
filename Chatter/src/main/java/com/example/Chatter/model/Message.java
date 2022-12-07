@@ -12,13 +12,16 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String messageText;
+    private String whoMessaged;
 
-    public Message() {
+    public Message(String whoMessaged) {
+        this.whoMessaged = whoMessaged;
     }
 
-    public Message(int id, String messageText) {
+    public Message(int id, String messageText, String whoMessaged) {
         this.id = id;
         this.messageText = messageText;
+        this.whoMessaged = whoMessaged;
     }
 
     public int getId() {

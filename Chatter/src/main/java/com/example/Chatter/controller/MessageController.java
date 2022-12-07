@@ -16,7 +16,7 @@ public class MessageController {
     @PostMapping("/new")
     public String add(@RequestBody Message message) {
         messageService.saveMessage(message);
-        return "User Added!";
+        return "Message Added!";
     }
 
     @GetMapping("/all")
